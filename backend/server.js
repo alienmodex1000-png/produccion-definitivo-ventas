@@ -1932,7 +1932,7 @@ app.post('/api/sales/:id/refund', async (req, res) => {
 
         // Record refund items
         const refundItemStmt = db.prepare(
-            'INSERT INTO sale_refund_items (refund_id, sale_item_id, product_id, product_name, quantity, unit_price, subtotal) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)'
+            'INSERT INTO sale_refund_items (refund_id, sale_item_id, product_id, product_name, quantity, unit_price, subtotal) VALUES (?, ?, ?, ?, ?, ?, ?)'
         );
         for (const ri of itemsToRefund) {
             refundItemStmt.run(refundId, ri.sale_item_id, ri.product_id || null, ri.product_name, ri.quantity, ri.unit_price, ri.unit_price * ri.quantity);
