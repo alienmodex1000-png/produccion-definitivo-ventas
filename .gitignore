@@ -1,0 +1,20 @@
+# Datos y base de datos local (evita sobreescribir datos reales de clientes)
+datos_negocio/database.sqlite*
+datos_negocio/database.sqlite-wal
+datos_negocio/database.sqlite-shm
+datos_negocio/imagenes/*
+datos_negocio/facturas_gastos/*
+!datos_negocio/imagenes/.gitkeep
+!datos_negocio/facturas_gastos/.gitkeep
+
+# Archivos de prueba y respaldos
+backend/backups/*
+backend/uploads/*
+backend/test_*.js
+backend/fix_*.js
+backend/seed_data.js
+
+# Logs y temporales
+*.log
+.DS_Store
+Thumbs.db
